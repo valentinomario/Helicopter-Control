@@ -5,8 +5,8 @@ function plotyu(out,varargin)
     addParameter(p, 'ylim', 0);
     addParameter(p,'ulegend',{});
     addParameter(p,'ylegend',{});
-    addParameter(p,'un',1);
-    addParameter(p,'yn',1);
+    addParameter(p,'un',0);
+    addParameter(p,'yn',0);
     parse(p, varargin{:});
     ulim = p.Results.ulim;
     ylim = p.Results.ylim;
@@ -15,7 +15,11 @@ function plotyu(out,varargin)
     un = p.Results.un;
     yn = p.Results.yn;
     figure
-    plot(out.u.time, out.u.signals.values(:,un));
+    if un~=0
+        plot(out.u.time, out.u.signals.values(:,un));
+    else
+        plot(out.u.time, out.u.signals.values);
+    end
     title('Controllo');
     xlabel('Tempo (s)');
     ylabel('Ampiezza');
@@ -25,7 +29,11 @@ function plotyu(out,varargin)
     end
 
     figure
-    plot(out.y.time, out.y.signals.values(:,yn));
+    if un~=0
+        plot(out.y.time, out.y.signals.values(:,yn));
+    else
+        plot(out.y.time, out.y.signals.values);
+    end
     title('Uscite');
     xlabel('Tempo (s)');
     ylabel('Velocità (m/s - rad/s)');
