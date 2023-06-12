@@ -3,7 +3,7 @@
 The aim of the paper is the application of three different design
 techniques for the hovering control of a Yamaha R-MAX helicopter. The
 Yamaha R-MAX is a gasoline-powered UAV, controlled in line of sight by
-the user via a remote control. It was designed primarily to be used in
+the user via a remote controller. It was designed primarily to be used in
 agriculture.
 
 The mathematical model of a helicopter is clearly non-linear and the
