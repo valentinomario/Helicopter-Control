@@ -50,7 +50,7 @@ by the gyroscopic yaw rate sensor.
 *Figure 1: System Description*
 
 An extensive discussion of the presented work can be found [here (in
-English)](https://github.com/valentinomario/Helicopter-Control/blob/main/Helicopter%20Control%20(IT).pdf) or [here (in Italian)](https://github.com/valentinomario/Helicopter-Control/blob/main/Helicopter%20Control%20(IT).pdf).
+English)](https://github.com/valentinomario/Helicopter-Control/blob/main/Helicopter%20Control%20(ENG).pdf) or [here (in Italian)](https://github.com/valentinomario/Helicopter-Control/blob/main/Helicopter%20Control%20(IT).pdf).
 
 Since the paper was intended for an
 Italian exam, it was originally written in Italian, and each part has
