@@ -45,13 +45,13 @@ The outputs of the model are the three translational speeds **u, v** and
 **w, and the rotation speed about the vertical axis** yaw rate measured
 by the gyroscopic yaw rate sensor.
 
-![](./media/image1.png){width="3.5416666666666665in"
-height="1.6041666666666667in"}
+![](./media/image1.png){width="3.5416666666666665in" height="1.6041666666666667in"}
 
 Figure 1: System Description
 
 An extensive discussion of the presented work can be found [here (in
 English)](https://github.com/valentinomario/Helicopter-Control/blob/main/Helicopter%20Control%20(IT).pdf) or [here (in Italian)](https://github.com/valentinomario/Helicopter-Control/blob/main/Helicopter%20Control%20(IT).pdf).
+
 Since the paper was intended for an
 Italian exam, it was originally written in Italian, and each part has
 now been translated using automated software.
@@ -106,7 +106,6 @@ Le uscite del modello sono le tre velocità traslazionali **u,v** e
 **w**, e la velocità di rotazione intorno all\'asse verticale **yaw
 rate** misurata dal gyroscopic yaw rate sensor.
 
-![](./media/image1.png){width="3.54375in"
-height="1.6083333333333334in"}
+![](./media/image1.png){width="3.54375in" height="1.6083333333333334in"}
 
 Figura 1: Descrizione del sistema
