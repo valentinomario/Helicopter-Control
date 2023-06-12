@@ -1,4 +1,4 @@
-![Logo_DIETI_finale_con_scritte](media/image1.png){width="5.511811023622047in"
+![Logo_DIETI_finale_con_scritte](./media/image1.png){width="5.511811023622047in"
 height="1.3978510498687664in"}
 
 SCUOLA POLITECNICA E DELLE SCIENZE DI BASE
@@ -96,7 +96,7 @@ The outputs of the model are the three translational speeds **u, v** and
 w**, and the rotation speed about the vertical axis** yaw rate measured
 by the gyroscopic yaw rate sensor.
 
-![](media/image2.png){width="3.5416666666666665in"
+![](./media/image2.png){width="3.5416666666666665in"
 height="1.6041666666666667in"}
 
 Figure 1: System Description
@@ -290,7 +290,7 @@ CC_itae = ss(A-B\*K_itae,B,C,D);
 
 step(CC_itae), dcgain(CC_itae)
 
-> ![https://www.mathworks.com/file0.png](media/image3.png){width="4.375in"
+> ![https://www.mathworks.com/file0.png](./media/image3.png){width="4.375in"
 > height="3.28125in"}
 
 Figure 2: System Step Response with Status Feedback
@@ -393,13 +393,13 @@ eig_out = sim(\'autovalori_sim.slx\');
 
 plotyu(eig_out,\'ulim\',\[-0.05,0.05\],\'ylegend\',outputs,\'ulegend\',inputs)
 
-![https://www.mathworks.com/file1.png](media/image4.png){width="4.373611111111111in"
+![https://www.mathworks.com/file1.png](./media/image4.png){width="4.373611111111111in"
 height="3.2784722222222222in"}
 
 Figure 3: Control action corresponding to the simulation with eigenvalue
 assignment and integral action
 
-![https://www.mathworks.com/file0.png](media/image5.png){width="4.373611111111111in"
+![https://www.mathworks.com/file0.png](./media/image5.png){width="4.373611111111111in"
 height="3.2784722222222222in"}
 
 Figure 4: Eigenvalue assignment simulation output and integral action
@@ -415,12 +415,12 @@ eig_out_obs = sim(\'autovalori_sim.slx\');
 
 plotyu(eig_out_obs,\'ulim\',\[-0.05,0.05\],\'ylegend\',outputs,\'ulegend\',inputs,\'un\',1:4,\'yn\',1:4)
 
-![](media/image6.png){width="4.37129593175853in"
+![](./media/image6.png){width="4.37129593175853in"
 height="3.2784722222222222in"}
 
 Figure 5: Control action with observer
 
-![](media/image7.png){width="4.37129593175853in"
+![](./media/image7.png){width="4.37129593175853in"
 height="3.2784722222222222in"}
 
 Figure 6: Simulation output with observer
@@ -433,12 +433,12 @@ xlabel(\'Tempo (s)\')
 
 xlim(\[0 5\])
 
-![](media/image8.png){width="4.37129593175853in"
+![](./media/image8.png){width="4.37129593175853in"
 height="3.2784722222222222in"}
 
 Figure 7: Error between observed state and actual state
 
-![](media/image9.png){width="6.7148239282589675in"
+![](./media/image9.png){width="6.7148239282589675in"
 height="2.3663506124234472in"}
 
 Figure 8: Final control scheme assigning eigenvalues
@@ -448,39 +448,44 @@ Figure 8: Final control scheme assigning eigenvalues
 The Mixed Sensitivity Design technique also allows robustness
 specifications to be taken into account. The implant is assumed to be
 affected by multiplicative uncertainty:
-![](media/image10.png){width="0.875in" height="0.1875in"} where
-![](media/image11.png){width="2.557292213473316in" height="1.21875in"}:
-The actual plant has an output uncertainty on each channel which, in the
-worst case, is ![](media/image12.png){width="0.4114588801399825in"
-height="0.1875in"} on the gain and a time delay of
-![](media/image13.png){width="0.4010422134733158in" height="0.1875in"}.
+![](./media/image10.png){width="0.875in" height="0.1875in"} where
+![](./media/image11.png){width="2.557292213473316in"
+height="1.21875in"}: The actual plant has an output uncertainty on each
+channel which, in the worst case, is
+![](./media/image12.png){width="0.4114588801399825in" height="0.1875in"}
+on the gain and a time delay of
+![](./media/image13.png){width="0.4010422134733158in"
+height="0.1875in"}.
 
 The **mixsyn** command searches for the regulator
-![](media/image14.png){width="0.13541666666666666in" height="0.1875in"}
-which minimizes the norm
-![](media/image15.png){width="0.24479221347331584in" height="0.1875in"}
-of the matrix ![](media/image16.png){width="1.1614588801399826in"
+![](./media/image14.png){width="0.13541666666666666in"
+height="0.1875in"} which minimizes the norm
+![](./media/image15.png){width="0.24479221347331584in"
+height="0.1875in"} of the matrix
+![](./media/image16.png){width="1.1614588801399826in"
 height="0.71875in"} where
-![](media/image17.png){width="0.13541666666666666in" height="0.1875in"}
-and ![](media/image18.png){width="0.11458333333333333in"
+![](./media/image17.png){width="0.13541666666666666in"
+height="0.1875in"} and
+![](./media/image18.png){width="0.11458333333333333in"
 height="0.1875in"} are the complementary and direct sensitivity
 functions, respectively. Matrices
-![](media/image19.png){width="0.8333333333333334in" height="0.1875in"}
+![](./media/image19.png){width="0.8333333333333334in" height="0.1875in"}
 are weight matrices that allow you to choose in which band to go to
 minimize the matrix that they multiply.
 
 ## Choice of Wt
 
-Let ![](media/image20.png){width="1.171875546806649in"
+Let ![](./media/image20.png){width="1.171875546806649in"
 height="0.1875in"} it is shown, applying the small gain theorem, that
 the system is robust if
-![](media/image21.png){width="1.0208333333333333in" height="0.1875in"}.
-The weight matrix ![](media/image22.png){width="0.23437554680664918in"
+![](./media/image21.png){width="1.0208333333333333in"
+height="0.1875in"}. The weight matrix
+![](./media/image22.png){width="0.23437554680664918in"
 height="0.1875in"} must be greater than
-![](media/image23.png){width="0.14583333333333334in" height="0.1875in"}
-for all frequencies. Since this is generally a very restrictive
-sufficient condition, small frequency bands are tolerated in which the
-mark-up is not perfect.
+![](./media/image23.png){width="0.14583333333333334in"
+height="0.1875in"} for all frequencies. Since this is generally a very
+restrictive sufficient condition, small frequency bands are tolerated in
+which the mark-up is not perfect.
 
 delay = 0.01;
 
@@ -494,7 +499,7 @@ bode(G(1,1),Greal(1,1))
 
 legend(\"G(1,1)\",\"Greal(1,1)\")
 
-![https://www.mathworks.com/file0.png](media/image24.png){width="4.373611111111111in"
+![https://www.mathworks.com/file0.png](./media/image24.png){width="4.373611111111111in"
 height="3.2784722222222222in"}
 
 Figure 9: Nominal and real process bode diagrams (first input-output
@@ -506,7 +511,7 @@ WT = (1 - 1.1\*(1-s\*delay/2)/(1+s\*delay/2)).\*eye(4);
 
 sigma(WT,Delta)
 
-![](media/image25.png){width="4.37129593175853in"
+![](./media/image25.png){width="4.37129593175853in"
 height="3.2784722222222222in"}
 
 Figure 10: Uncertainties and weight matrix
@@ -515,10 +520,10 @@ Figure 10: Uncertainties and weight matrix
 
 Matrices $W_{S}$ and $W_{K}$ are chosen by trial and error. The weight
 matrix of direct sensitivity is chosen large where we want
-![](media/image17.png){width="0.13541666666666666in" height="0.1875in"}
-large, that is, in the desired bandwidth. To have tracking of the step
-reference, very low frequency poles are placed that force the presence
-of an integrator in the ring function.
+![](./media/image17.png){width="0.13541666666666666in"
+height="0.1875in"} large, that is, in the desired bandwidth. To have
+tracking of the step reference, very low frequency poles are placed that
+force the presence of an integrator in the ring function.
 
 WS = tf(zeros(4));
 
@@ -532,12 +537,12 @@ WS(4,4) = 1e4/(1+s/1e-5);
 
 sigma(WT,WS)
 
-![https://www.mathworks.com/file0.png](media/image26.png){width="4.373611111111111in"
+![https://www.mathworks.com/file0.png](./media/image26.png){width="4.373611111111111in"
 height="3.2784722222222222in"}
 
 Figure 11: Choosing WS Weight Matrices (in red)
 
-The matrix ![](media/image27.png){width="0.24479221347331584in"
+The matrix ![](./media/image27.png){width="0.24479221347331584in"
 height="0.1875in"} It is used to weigh the control action: it must be
 increased to reduce the control amplitude, being careful to comply with
 other specifications, including that on robustness. Constant 0.5 was
@@ -557,12 +562,12 @@ plotyu(out_hinf,\'ulim\',
 
 \[-0.05,0.05\],\'ylegend\',outputs,\'ulegend\',inputs,\'un\',1:4,\'yn\',1:4)
 
-![](media/image28.png){width="4.37129593175853in"
+![](./media/image28.png){width="4.37129593175853in"
 height="3.2784722222222222in"}
 
 Figure 12: Control action with mixsyn
 
-![](media/image29.png){width="4.37129593175853in"
+![](./media/image29.png){width="4.37129593175853in"
 height="3.2784722222222222in"}
 
 Figure 13: Controller simulation obtained with mixsyn
@@ -580,22 +585,22 @@ sigma(T,S)
 
 legend(\'T\',\'S\')
 
-![https://www.mathworks.com/file0.png](media/image30.png){width="4.373611111111111in"
+![https://www.mathworks.com/file0.png](./media/image30.png){width="4.373611111111111in"
 height="3.2784722222222222in"}
 
 Figure 14: Diagram of singular values of direct and complementary
 sensitivity functions
 
 In addition, the singular values of
-![](media/image31.png){width="0.4479166666666667in" height="0.1875in"}
+![](./media/image31.png){width="0.4479166666666667in" height="0.1875in"}
 are always below the axis
-![](media/image32.png){width="0.2656255468066492in" height="0.1875in"},
-so the system is robust. This is confirmed in the simulation on the real
-system.
+![](./media/image32.png){width="0.2656255468066492in"
+height="0.1875in"}, so the system is robust. This is confirmed in the
+simulation on the real system.
 
 sigma(WT\*T),grid
 
-![https://www.mathworks.com/file0.png](media/image33.png){width="4.373611111111111in"
+![https://www.mathworks.com/file0.png](./media/image33.png){width="4.373611111111111in"
 height="3.2784722222222222in"}
 
 Figure 15: Robustness check
@@ -604,18 +609,18 @@ plotyu(out_hinf,\'ulim\',
 
 \[-0.05,0.05\],\'ylegend\',outputs,\'ulegend\',inputs,\'un\',5:8,\'yn\',5:8)
 
-![](media/image34.png){width="4.37129593175853in"
+![](./media/image34.png){width="4.37129593175853in"
 height="3.2784722222222222in"}
 
 Figure 16: Control quantity action with the designed regulator, applied
 to the uncertain plant
 
-![](media/image35.png){width="4.37129593175853in"
+![](./media/image35.png){width="4.37129593175853in"
 height="3.2784722222222222in"}
 
 Figure 17: Simulation of the uncertain plant output
 
-![](media/image36.png){width="6.828358486439195in"
+![](./media/image36.png){width="6.828358486439195in"
 height="2.316360454943132in"}
 
 Figure 18: Complete simulink diagram with mixsyn
@@ -623,12 +628,13 @@ Figure 18: Complete simulink diagram with mixsyn
 # LQ Control
 
 The optimal LQ control consists of finding the
-![](media/image37.png){width="0.15104221347331584in" height="0.1875in"}
-state feedback matrix that minimizes the objective function
-![](media/image38.png){width="1.4322922134733158in"
+![](./media/image37.png){width="0.15104221347331584in"
+height="0.1875in"} state feedback matrix that minimizes the objective
+function ![](./media/image38.png){width="1.4322922134733158in"
 height="0.3020833333333333in"}. The matrices
-![](media/image39.png){width="0.14583333333333334in" height="0.1875in"}
-and ![](media/image14.png){width="0.13541666666666666in"
+![](./media/image39.png){width="0.14583333333333334in"
+height="0.1875in"} and
+![](./media/image14.png){width="0.13541666666666666in"
 height="0.1875in"} penalize respectively high values of the state and
 control inputs. The values are chosen by trial and error until the
 output with the desired characteristics is obtained. Since you want a
@@ -650,13 +656,13 @@ out_lq = sim(\'LQR_sim\');
 
 plotyu(out_lq,\'ulim\',\[-0.05,0.05\],\'ylegend\',outputs,\'ulegend\',inputs)
 
-![https://www.mathworks.com/file0.png](media/image40.png){width="4.373611111111111in"
+![https://www.mathworks.com/file0.png](./media/image40.png){width="4.373611111111111in"
 height="3.2784722222222222in"}
 
 Figure 19: Control magnitude of the controller designed with the LQ
 control
 
-![https://www.mathworks.com/file1.png](media/image41.png){width="4.373611111111111in"
+![https://www.mathworks.com/file1.png](./media/image41.png){width="4.373611111111111in"
 height="3.2784722222222222in"}
 
 Figure 20: Simulation with LQ Control
@@ -668,7 +674,7 @@ and the channels are strongly decoupled. Given the context, such an
 output is very desirable despite the settling time slightly exceeding
 the specification.
 
-![](media/image42.png){width="6.638081802274716in"
+![](./media/image42.png){width="6.638081802274716in"
 height="1.545550087489064in"}
 
 Figure 21: Complete diagram of state feedback with K obtained through
@@ -683,9 +689,9 @@ or output measurement noises. By the principle of separation, the
 observer\'s design can be carried out once the state feedback design is
 completed. In particular, it is sufficient to solve the LQ problem to
 the dual system by obtaining the observer matrix
-![](media/image43.png){width="0.13541666666666666in" height="0.1875in"}
-. Again, the initial conditions of the observer and the system are
-different.
+![](./media/image43.png){width="0.13541666666666666in"
+height="0.1875in"} . Again, the initial conditions of the observer and
+the system are different.
 
 BandWidth=500;
 
@@ -711,13 +717,13 @@ out_lqg = sim(\'LQG_sim\');
 
 plotyu(out_lqg,\'ulim\',\[-0.05,0.05\],\'ylegend\',outputs,\'ulegend\',inputs)
 
-![https://www.mathworks.com/file0.png](media/image44.png){width="4.373611111111111in"
+![https://www.mathworks.com/file0.png](./media/image44.png){width="4.373611111111111in"
 height="3.2784722222222222in"}
 
 Figure 22: Kalman filter system control magnitude in the presence of
 process and output noise
 
-![https://www.mathworks.com/file1.png](media/image45.png){width="4.373611111111111in"
+![https://www.mathworks.com/file1.png](./media/image45.png){width="4.373611111111111in"
 height="3.2784722222222222in"}
 
 Figure 23: Kalman filter system output
@@ -733,12 +739,12 @@ xlabel(\'Tempo (s)\')
 
 xlim(\[0 5\])
 
-![https://www.mathworks.com/file0.png](media/image46.png){width="4.375in"
+![https://www.mathworks.com/file0.png](./media/image46.png){width="4.375in"
 height="3.28125in"}
 
 Figure 24: Estimation error between observed and actual state
 
-![](media/image47.png){width="6.5in" height="2.6215277777777777in"}
+![](./media/image47.png){width="6.5in" height="2.6215277777777777in"}
 
 Figure 25: Complete diagram of the LQG control
 
