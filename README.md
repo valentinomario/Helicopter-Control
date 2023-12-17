@@ -37,8 +37,8 @@ quantities should always remain far from the limit values. In the
 Simulink simulation schemes, however, saturation blocks that simulate
 the physical limit of the actuators have been inserted.
 
-The settling time should be about 5 seconds. Overelongation should be
-low (maximum 15-20%). In this context, a lower overelongation is
+The settling time should be about 5 seconds. Overshooting should be
+low (maximum 15-20%). In this context, a lower overshooting is
 preferable even if this leads to a slight increase in settling time.
 
 The outputs of the model are the three translational speeds **u, v** and
