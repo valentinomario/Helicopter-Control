@@ -109,3 +109,5 @@ rate** misurata dal gyroscopic yaw rate sensor.
 ![](./media/image1.png)
 
 *Figura 1: Descrizione del sistema*
+
+Questo progetto è stato sviluppato per l\'esame Complementi di Controlli tenuto dal Prof. Pironti presso l\'Università degli Studi di Napoli Federico II.
